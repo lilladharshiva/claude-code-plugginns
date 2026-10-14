@@ -1,0 +1,63 @@
+{
+"$schema": "https://json.schemastore.org/claude-marketplace.json",
+"name": "claude-code-developer-plugins",
+"displayName": "Claude Code Developer Toolkit & Skills",
+"version": "1.0.0",
+"description": "A curated collection of production-grade custom skills, workflow automation tools, and MCP servers for Claude Code CLI.",
+"publisher": {
+"name": "Your Name / Organization",
+"url": "https://github.com/your-username"
+},
+"repository": {
+"type": "git",
+"url": "https://github.com/your-username/claude-code-plugins.git"
+},
+"categories": [
+"Developer Tools",
+"Code Review",
+"Git & Workflows",
+"GIS & Spatial"
+],
+"keywords": [
+"claude-code",
+"claude-plugins",
+"skills",
+"mcp-server",
+"code-review",
+"git-assistant"
+],
+"icon": "assets/icon.png",
+"plugins": [
+{
+"id": "code-reviewer",
+"name": "Code Reviewer & Security Audit",
+"version": "1.0.0",
+"description": "Scans repository code for security vulnerabilities, memory leaks, and provides automated clean-code refactoring.",
+"path": "./skills/code-reviewer",
+"tags": ["security", "audit", "refactor"]
+},
+{
+"id": "git-assistant",
+"name": "Git & PR Assistant",
+"version": "1.0.0",
+"description": "Automates conventional Git commit messages, branch naming, and pull request summary generation.",
+"path": "./skills/git-assistant",
+"tags": ["git", "commit", "pull-request"]
+},
+{
+"id": "gis-spatial",
+"name": "GIS & Spatial Toolkit",
+"version": "1.0.0",
+"description": "Provides GeoPandas, PostGIS, GeoJSON validation, and spatial analysis automation.",
+"path": "./skills/gis-spatial",
+"tags": ["gis", "postgis", "spatial", "maps"]
+}
+],
+"mcpServers": [
+{
+"id": "postgres-connector",
+"name": "PostgreSQL MCP Server",
+"description": "Connects Claude Code to PostgreSQL databases for schema inspection and read-only query execution.",
+"configPath": "./mcp/mcp.json"
+}
+]
